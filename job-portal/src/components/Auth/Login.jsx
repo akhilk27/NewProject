@@ -1,49 +1,65 @@
 // src/components/Auth/Login.jsx
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
+import './Login.css';
+import LandingHeader from '../LandingHeader';
+import Footer from '../Footer';
 
 const Login = () => {
-  const [userType, setUserType] = useState('');
   const navigate = useNavigate();
+  const [formData, setFormData] = useState({
+    email: '',
+    password: '',
+  });
 
-  const handleLogin = (e) => {
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = (e) => {
     e.preventDefault();
-    // Perform login logic here
+    // Handle form submission logic
+    navigate('/dashboard'); // Redirect to dashboard or another page after form submission
+  };
 
-    // Redirect based on user type
-    if (userType === 'admin') {
-      navigate('/admin/dashboard');
-    } else if (userType === 'contractor') {
-      navigate('/contractor/dashboard');
-    }
+  const handleSignUpClick = () => {
+    navigate('/signup');
   };
 
   return (
-    <div className="login">
-      <h2>Login</h2>
-      <form onSubmit={handleLogin}>
-        {/* Add your login form fields here */}
-        <div>
-          <label>
-            <input 
-              type="radio" 
-              value="admin" 
-              checked={userType === 'admin'}
-              onChange={(e) => setUserType(e.target.value)}
-            /> Admin
-          </label>
-          <label>
-            <input 
-              type="radio" 
-              value="contractor" 
-              checked={userType === 'contractor'}
-              onChange={(e) => setUserType(e.target.value)}
-            /> Contractor
-          </label>
+    <>
+      <LandingHeader />
+      <div className="login-container">
+        <h2>Log In</h2>
+        <form className="login-form" onSubmit={handleSubmit}>
+          <label>Email</label>
+          <input
+            type="email"
+            name="email"
+            placeholder="email@example.com"
+            value={formData.email}
+            onChange={handleChange}
+          />
+          <label>Password</label>
+          <input
+            type="password"
+            name="password"
+            placeholder="Password"
+            value={formData.password}
+            onChange={handleChange}
+          />
+          <button type="submit" className="login-btn">Log In</button>
+        </form>
+        <div className="forgot-password">
+          <Link to="/forgot-password">Forgot your password?</Link>
         </div>
-        <button type="submit">Login</button>
-      </form>
-    </div>
+        <div className="signup-link">
+          <p>Don't have an account?</p>
+          <button className="signup-btn" onClick={handleSignUpClick}>Sign Up</button>
+        </div>
+      </div>
+      <Footer />
+    </>
   );
 };
 
