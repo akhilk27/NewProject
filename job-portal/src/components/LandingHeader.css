@@ -1,0 +1,51 @@
+/* src/components/LandingPage/LandingHeader.css */
+.landing-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #f8f9fa;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+  
+  .company-name {
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  .landing-nav {
+    display: flex;
+    align-items: center;
+  }
+  
+  .landing-nav a {
+    margin-left: 20px;
+    text-decoration: none;
+    color: #333;
+    transition: color 0.3s;
+  }
+  
+  .landing-nav a.active,
+  .landing-nav a:hover {
+    color: #01e6ff;
+  }
+  
+  .login-btn, .get-started-btn {
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    margin-left: 10px;
+  }
+
+  .login-btn {
+    color: #007bff;
+    border: 1px solid #007bff;
+  }
+  
+  .get-started-btn {
+    background-color: #007bff;
+    color: white;
+  }
+  

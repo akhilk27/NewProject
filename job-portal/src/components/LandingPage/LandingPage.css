@@ -1,0 +1,131 @@
+/* src/components/LandingPage/LandingPage.css */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: Arial, sans-serif;
+  }
+  
+  .landing-page {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  
+  .company-name {
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  .start-tracking-btn, .explore-tt-btn {
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+  }
+  
+  .start-tracking-btn {
+    background-color: #007bff;
+    color: white;
+  }
+  
+  .explore-tt-btn {
+    color: #007bff;
+    border: 1px solid #007bff;
+  }
+
+
+  
+  .hero {
+    text-align: center;
+    padding: 100px 20px;
+    background-color: #e9ecef;
+  }
+  
+  .hero h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+  }
+  
+  /* How it works */
+  .how-it-works, .pricing {
+    padding: 50px 20px;
+    text-align: center;
+  }
+  
+  .how-it-works-content {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .grid-hitw {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    align-items: center;
+  }
+  
+  .grid-item {
+    padding: 20px;
+  }
+  
+  .startfBtn, .ettBtn{
+    margin-top: 30px;
+  }
+  
+  .how-it-works-image {
+    width: 100%;
+    height: auto;
+  }
+
+  .how-it-works-text{
+    text-align: left;
+  }
+  
+  .how-it-works-text h2 {
+    margin-bottom: 20px;
+  }
+  .how-it-works-text p {
+    margin-bottom: 30px;
+  }
+
+  .lbt1 {
+    margin: 45px 10px 0 0;
+  }
+
+  .pricing{
+    background-color: #a8c1df;
+  }
+  
+  .pricing-plan {
+    text-align: center;
+    padding: 50px 0 60px 0;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    margin: 20px 40px;
+    background-color: #f2f2f2;
+  }
+  
+  .pricing-circle {
+    width: 100px;
+    height: 100px;
+    background-color: #7cabdd;
+    border-radius: 50%;
+    margin: 0 auto 20px;
+  }
+  
+  .pricing-plan h4 {
+    margin-bottom: 30px;
+  }
+  
+  .p1, .p2 {
+    padding: 10px 20px;
+    margin: 10px;
+  }
+  
+  .footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #f8f9fa;
+    margin-top: auto;
+  }
+  

@@ -1,16 +1,27 @@
-import './App.css';
-import Header from './components/Header';
+// src/App.js
+import React from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import LandingPage from './components/LandingPage/LandingPage';
+import Login from './components/Auth/Login';
+import Signup from './components/Auth/SignUp';
+import AdminDashboard from './components/Admin/Header';
+import ContractorDashboard from './components/Contractor/Dashboard';
+import Footer from './components/Footer'; // Import Footer component
 
 function App() {
-  const profile = {
-    picture: 'https://via.placeholder.com/50', // Replace with actual profile picture URL
-    name: 'Akhilesh K'
-  };
-
   return (
-    <div className="App">
-      <Header profile={profile} />
-    </div>
+    <Router>
+      <div className="app-container">
+        <Routes>
+          <Route path="/" element={<LandingPage />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/signup" element={<Signup />} />
+          <Route path="/admin/*" element={<AdminDashboard />} />
+          <Route path="/contractor/*" element={<ContractorDashboard />} />
+        </Routes>
+        <Footer />
+      </div>
+    </Router>
   );
 }
 
