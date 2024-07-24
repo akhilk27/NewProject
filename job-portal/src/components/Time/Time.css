@@ -1,0 +1,50 @@
+/* src/components/Time/Time.css */
+.time-container {
+    display: flex;
+    height: 100%;
+  }
+  
+  .time-menu {
+    width: 250px;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+  }
+  
+  .time-menu ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .time-menu li {
+    margin-bottom: 10px;
+  }
+  
+  .time-menu a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #495057;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+  }
+  
+  .time-menu a:hover {
+    background-color: #e9ecef;
+  }
+  
+  .time-menu a.active {
+    background-color: #007bff;
+    color: white;
+  }
+  
+  .time-menu a svg {
+    margin-right: 10px;
+    width: 20px;
+  }
+  
+  .time-content {
+    flex-grow: 1;
+    padding: 20px;
+  }

@@ -1,0 +1,98 @@
+/* src/components/Time/Dashboard.css */
+.dashboard {
+    padding: 20px;
+  }
+  
+  .search-bar {
+    position: relative;
+    margin-bottom: 20px;
+  }
+  
+  .search-bar input {
+    width: 100%;
+    padding: 10px 40px 10px 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+  
+  .search-icon {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #888;
+  }
+  
+  .overview h2, .requests h2 {
+    margin-bottom: 20px;
+    text-align: left;
+  }
+  
+  .overview-cards {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+  }
+  
+  .card {
+    background-color: #fff;
+    border-radius: 5px;
+    border-color: black;
+    padding: 20px;
+    width: 30%;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  }
+  
+  .card h3 {
+    margin-bottom: 10px;
+    font-size: 18px;
+  }
+  
+  .card p {
+    font-size: 24px;
+    font-weight: bold;
+    color: #007bff;
+  }
+  
+  .requests-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .export-btn {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+  }
+  
+  .export-btn svg {
+    margin-right: 5px;
+  }
+  
+  .requests-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .requests-table th, .requests-table td {
+    border: 1px solid #dee2e6;
+    padding: 12px;
+    text-align: left;
+  }
+  
+  .requests-table th {
+    background-color: #f8f9fa;
+    font-weight: bold;
+  }
+  
+  .requests-table tbody tr:nth-child(even) {
+    background-color: #f8f9fa;
+  }
